@@ -1,3 +1,3 @@
 import { initFn } from "./initFn";
 
-initFn();
+initFn("initial test string", 42);

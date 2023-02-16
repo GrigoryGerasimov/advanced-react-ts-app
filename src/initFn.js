@@ -1,1 +1,0 @@
-export const initFn = () => console.log("__init__");
