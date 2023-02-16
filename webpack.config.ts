@@ -3,7 +3,7 @@ import { defineWebpackConfig, definePaths } from "./config/webpack";
 
 export default (env: IEnvProps) => {
     const configPaths: IWebpackConfigPaths = {
-        entry: definePaths(["src", "index.ts"]),
+        entry: definePaths(["src", "index.tsx"]),
         output: definePaths(["dist"]),
         template: definePaths(["public", "index.html"])
     };
