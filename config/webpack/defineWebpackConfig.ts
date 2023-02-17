@@ -18,7 +18,7 @@ export const defineWebpackConfig = (paths: IWebpackConfigPaths, options: IWebpac
         },
         plugins: definePlugins(template),
         module: {
-            rules: defineLoaders()
+            rules: defineLoaders(isDev)
         },
         resolve: defineResolution(),
         devtool: isDev && "inline-source-map",
