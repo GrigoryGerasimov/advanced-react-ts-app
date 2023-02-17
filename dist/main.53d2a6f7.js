@@ -1,1 +1,0 @@
-(()=>{"use strict";console.log("__init__","initial test string",42)})();
