@@ -4,13 +4,13 @@ import webpack from "webpack";
 
 export const defineLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
     const tsLoader: IWebpackLoader = {
-        test: /\.tsx?/gi,
-        use: "ts-loader",
+        test: /\.(ts|tsx)$/i,
+        use: ["ts-loader"],
         exclude: /node_modules/
     }
 
     const stylesLoader: IWebpackLoader = {
-        test: /\.s(a|c)ss$/gi,
+        test: /\.s(a|c)ss$/i,
         use: [
             isDev ? "style-loader" : MiniCssExtractPlugin.loader,
             {
