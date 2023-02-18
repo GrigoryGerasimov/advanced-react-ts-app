@@ -17,7 +17,7 @@ export const defineLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
                 loader: "css-loader",
                 options: {
                     modules: {
-                        auto: (resourcePath: string) => !!resourcePath.includes(".module.scss"),
+                        auto: (resourcePath: string) => resourcePath.includes(".module.scss"),
                         localIdentName: isDev ? "[name]_[path]__[local]::[hash:base64:5]" : "[name]_[path]__[local]__[hash:base64:8]"
                     }
                 }
