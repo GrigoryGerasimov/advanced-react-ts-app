@@ -1,4 +1,5 @@
 import { AboutPageLazy, MainPageLazy, CounterPageLazy } from "./pages";
+import { getClassNames } from "../helpers/classNames/getClassNames";
 import { Header } from "./components/Header/Header";
 import { Button } from "./components/Button/Button";
 import { Routes, Route } from "react-router-dom";
@@ -11,7 +12,7 @@ const App = () => {
     const { theme, themeSwitchHandler } = useTheme();
 
     return (
-        <div className={`${classes.app} ${theme}`}>
+        <div className={getClassNames(classes.app, {}, [theme])}>
             <Button onClick={themeSwitchHandler} title={theme}/>
             <Header/>
             <Suspense fallback={<Loader/>}>
