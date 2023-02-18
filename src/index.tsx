@@ -1,11 +1,14 @@
-import { BrowserRouter } from "react-router-dom"
+import { ThemeProvider } from "./app/hooks/useTheme";
+import { BrowserRouter } from "react-router-dom";
 import { render } from "react-dom";
+import "./styles/index.scss";
 import App from "./app/App";
-import "./index.scss";
 
 render(
     <BrowserRouter>
-        <App/>
+        <ThemeProvider>
+            <App/>
+        </ThemeProvider>
     </BrowserRouter>,
     document.querySelector("#root")
 )

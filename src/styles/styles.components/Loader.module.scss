@@ -9,7 +9,7 @@
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: var(--text-color);
         animation: infinite loader 5s;
     }
 }
