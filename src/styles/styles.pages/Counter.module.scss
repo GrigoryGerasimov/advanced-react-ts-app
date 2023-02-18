@@ -1,0 +1,19 @@
+.counter {
+    width: 500px;
+    height: 400px;
+    margin: 10% auto;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font: var(--font-lg)
+
+    &__output {
+        font: var(--font-m);
+        font-weight: 900;
+        margin: 20px;
+        color: var(--text-color);
+    }
+}

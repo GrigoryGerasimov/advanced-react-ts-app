@@ -3,7 +3,7 @@
 
     &__link {
         text-decoration: none;
-        color: rgba(0, 0, 0, 0.5);
+        color: var(--text-color);
         margin: 0 15px;
     }
 }
