@@ -1,4 +1,4 @@
-import { TClassNames } from "./TClassNames";
+import { TClassNames } from "../types/TClassNames";
 
 export const extractClassNameFromEntries = (classes: TClassNames): string[] => {
     return Object.entries(classes)

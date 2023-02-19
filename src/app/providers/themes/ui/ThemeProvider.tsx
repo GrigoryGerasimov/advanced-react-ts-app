@@ -1,9 +1,10 @@
-import { localStorageService } from "../../../shared/services/localStorageService/localStorageService";
+import { localStorageService } from "shared/lib/services/localStorageService/localStorageService";
 import { LS_THEME_KEY } from "../lib/constants/LSThemeKey";
+import { LS_APP_KEY } from "app/lib/constants/LSAppKeys";
 import React, { useState, useMemo, FC } from "react";
 import { ThemeContext } from "../lib/useTheme";
 import { ETheme } from "../lib/types/ETheme";
-import { LS_APP_KEY } from "../../LSAppKeys";
+
 
 const initialState = localStorageService.read(LS_APP_KEY)?.[LS_THEME_KEY] as ETheme ?? ETheme.LIGHT;
 

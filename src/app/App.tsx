@@ -1,11 +1,11 @@
-import { getClassNames } from "shared/helpers/classNames/getClassNames";
+import { getClassNames } from "shared/lib/helpers/classNames/getClassNames";
 import classes from "./styles/styles.global/App.module.scss"
 import { AboutPage, MainPage, CounterPage } from "pages";
 import { Button } from "shared/components/Button/Button";
 import Loader from "shared/components/Loader/Loader";
 import { Header } from "widgets/Header/ui/Header";
-import { useTheme } from "./themes/lib/useTheme";
 import { Routes, Route } from "react-router-dom";
+import { useTheme } from "./providers/themes";
 import { Suspense } from "react";
 
 const App = () => {
