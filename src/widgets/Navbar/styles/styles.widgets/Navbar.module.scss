@@ -1,0 +1,13 @@
+.navbar{
+    width: 100%;
+    height: var(--navbar-section-height);
+    padding: 40px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color-inverted);
+    color: var(--text-color-inverted);
+    text-shadow: var(--text-effect-inverted);
+}
