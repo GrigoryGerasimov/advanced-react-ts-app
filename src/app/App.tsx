@@ -1,4 +1,5 @@
 import { getClassNames } from "shared/lib/helpers/classNames/getClassNames";
+import { appRouterConfig } from "./providers/routes/AppRouter";
 import classes from "./styles/styles.global/App.module.scss"
 import { AboutPage, MainPage, CounterPage } from "pages";
 import { Button } from "shared/components/Button/Button";
@@ -17,9 +18,9 @@ const App = () => {
             <Header/>
             <Suspense fallback={<Loader/>}>
                 <Routes>
-                    <Route path="/about" element={<AboutPage/>}/>
-                    <Route path="/counter" element={<CounterPage/>}/>
-                    <Route path="/" element={<MainPage/>}/>
+                    {appRouterConfig.map(({ path, element }) => (
+                        <Route key={path} path={path} element={element}/>
+                    ))}
                 </Routes>
             </Suspense>
         </div>
