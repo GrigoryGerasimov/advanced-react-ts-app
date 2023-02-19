@@ -1,4 +1,4 @@
-import { TLocalStorageService, TLocalStorageResult } from "./TLocalStorageService";
+import { TLocalStorageService, TLocalStorageResult } from "./types/TLocalStorageService";
 
 export const localStorageService: TLocalStorageService = {
     create: (key, payload) => {
