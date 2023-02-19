@@ -5,7 +5,8 @@ export default (env: IEnvProps) => {
     const configPaths: IWebpackConfigPaths = {
         entry: definePaths(["src", "index.tsx"]),
         output: definePaths(["dist"]),
-        template: definePaths(["public", "index.html"])
+        template: definePaths(["public", "index.html"]),
+        source: definePaths(["src"])
     };
     
     const configOptions: IWebpackConfigOptions = {

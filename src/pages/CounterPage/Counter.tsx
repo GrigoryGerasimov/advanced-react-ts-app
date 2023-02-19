@@ -1,5 +1,5 @@
-import classes from "../../../styles/styles.pages/Counter.module.scss";
-import { Button } from "../../components/Button/Button";
+import classes from "../styles/styles.pages/Counter.module.scss";
+import { Button } from "shared/components/Button/Button";
 import { useState } from "react";
 
 const Counter = () => {

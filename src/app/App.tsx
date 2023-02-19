@@ -1,11 +1,11 @@
-import { AboutPageLazy, MainPageLazy, CounterPageLazy } from "./pages";
-import { getClassNames } from "../helpers/classNames/getClassNames";
-import { Header } from "./components/Header/Header";
-import { Button } from "./components/Button/Button";
+import { getClassNames } from "shared/helpers/classNames/getClassNames";
+import classes from "./styles/styles.global/App.module.scss"
+import { AboutPage, MainPage, CounterPage } from "pages";
+import { Button } from "shared/components/Button/Button";
+import Loader from "shared/components/Loader/Loader";
+import { Header } from "widgets/Header/ui/Header";
+import { useTheme } from "./themes/lib/useTheme";
 import { Routes, Route } from "react-router-dom";
-import Loader from "./components/Loader/Loader";
-import classes from "../styles/App.module.scss"
-import { useTheme } from "./hooks/useTheme";
 import { Suspense } from "react";
 
 const App = () => {
@@ -17,9 +17,9 @@ const App = () => {
             <Header/>
             <Suspense fallback={<Loader/>}>
                 <Routes>
-                    <Route path="/about" element={<AboutPageLazy/>}/>
-                    <Route path="/counter" element={<CounterPageLazy/>}/>
-                    <Route path="/" element={<MainPageLazy/>}/>
+                    <Route path="/about" element={<AboutPage/>}/>
+                    <Route path="/counter" element={<CounterPage/>}/>
+                    <Route path="/" element={<MainPage/>}/>
                 </Routes>
             </Suspense>
         </div>
