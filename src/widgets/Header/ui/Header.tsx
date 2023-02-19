@@ -1,4 +1,4 @@
-import classes from "../../../styles/styles.components/Header.module.scss";
+import classes from "../styles/styles.widgets/Header.module.scss";
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {

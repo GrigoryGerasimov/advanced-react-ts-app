@@ -1,8 +1,8 @@
-import { ThemeProvider } from "./app/hooks/useTheme";
+import { ThemeProvider } from "app/themes/ui/ThemeProvider";
 import { BrowserRouter } from "react-router-dom";
+import "app/styles/styles.global/index.scss";
 import { render } from "react-dom";
-import "./styles/index.scss";
-import App from "./app/App";
+import App from "app/App";
 
 render(
     <BrowserRouter>

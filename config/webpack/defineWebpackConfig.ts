@@ -3,7 +3,7 @@ import { IWebpackConfigOptions, IWebpackConfigPaths } from "./interfaces";
 import webpack from "webpack";
 
 export const defineWebpackConfig = (paths: IWebpackConfigPaths, options: IWebpackConfigOptions): webpack.Configuration => {
-    const { entry, output, template } = paths;
+    const { entry, output, template, source } = paths;
     const { mode, port } = options;
 
     const isDev = mode === "development";
@@ -20,7 +20,7 @@ export const defineWebpackConfig = (paths: IWebpackConfigPaths, options: IWebpac
         module: {
             rules: defineLoaders(isDev)
         },
-        resolve: defineResolution(),
+        resolve: defineResolution(source),
         devtool: isDev && "inline-source-map",
         devServer: isDev ? defineDevServer(port) : undefined
     }
