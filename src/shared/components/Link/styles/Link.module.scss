@@ -4,3 +4,13 @@
     color: inherit;
     text-shadow: inherit;
 }
+
+.primary {
+    color: var(--text-color-inverted);
+    text-shadow: var(--text-effect-inverted)
+}
+
+.secondary {
+    color: var(--text-color-inverted);
+    text-shadow: var(--text-effect-inverted);
+}

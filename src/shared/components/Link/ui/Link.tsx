@@ -1,16 +1,15 @@
-import { getClassNames } from "shared/lib/helpers/classNames/getClassNames";
-import { NavLink, NavLinkProps } from "react-router-dom";
+import { ILinkProps } from "../interfaces/ILinkProps";
+import { ETheme } from "../../../providers/themes";
+import { ELinkTheme } from "../types/ELinkTheme";
 import classes from "../styles/Link.module.scss";
+import { getClassNames } from "../../../lib";
+import { NavLink } from "react-router-dom";
 import { FC } from "react";
 
-interface AppLinkProps extends NavLinkProps {
-    theme?: string
-}
-
-export const Link: FC<AppLinkProps> = (props) => {
-    const { to, children } = props;
-
+export const Link: FC<ILinkProps> = ({ to, theme, children }) => {
     return (
-        <NavLink to={to} className={getClassNames(classes.applink)}>{children}</NavLink>
+        <NavLink to={to} className={getClassNames(classes.applink, {}, [theme === ETheme.DARK ? classes[ELinkTheme.PRIMARY] : classes[ELinkTheme.SECONDARY]])}>
+            {children}
+        </NavLink>
     )
 };

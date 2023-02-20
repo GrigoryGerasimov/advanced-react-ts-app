@@ -19,8 +19,8 @@ const Counter = () => {
                 <output className={classes["counter__output"]}>{counter}</output>
             </div>
             <div>
-                <Button onClick={increment} title="+ 1"/>
-                <Button onClick={decrement} title="- 1"/>
+                <Button onClick={increment} name="+ 1"/>
+                <Button onClick={decrement} name="- 1"/>
             </div>
         </div>
     )

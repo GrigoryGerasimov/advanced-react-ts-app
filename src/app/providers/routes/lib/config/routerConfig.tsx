@@ -1,8 +1,8 @@
 import { AboutPage, MainPage, CounterPage } from "pages";
-import { IAppRoutes } from "./lib/interfaces/IAppRoutes";
-import { EAppRoutes } from "./lib/types/EAppRoutes";
+import { IAppRoutes } from "../interfaces/IAppRoutes";
+import { EAppRoutes } from "../types/EAppRoutes";
 
-export const appRouterConfig: IAppRoutes[] = [
+export const routerConfig: IAppRoutes[] = [
     {
         path: EAppRoutes.ABOUT,
         linkTitle: "About Page",
