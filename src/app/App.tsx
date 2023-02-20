@@ -1,10 +1,10 @@
 import { getClassNames } from "shared/lib/helpers/classNames/getClassNames";
 import { appRouterConfig } from "./providers/routes/AppRouter";
-import classes from "./styles/styles.global/App.module.scss"
-import Loader from "shared/components/Loader/Loader";
-import { Navbar } from "widgets/Navbar/ui/Navbar";
+import classes from "./styles/styles.app/App.module.scss";
+import { useTheme } from "shared/providers/themes";
+import { Loader } from "shared/components/Loader";
 import { Routes, Route } from "react-router-dom";
-import { useTheme } from "./providers/themes";
+import { Navbar } from "widgets/Navbar";
 import { Suspense } from "react";
 
 const App = () => {
