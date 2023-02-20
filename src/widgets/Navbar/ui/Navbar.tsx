@@ -1,17 +1,17 @@
-import { getClassNames } from "shared/lib/helpers/classNames/getClassNames";
-import { appRouterConfig } from "app/providers/routes/AppRouter";
+import { INavbarProps } from "../interfaces/INavbarProps";
 import classes from "../styles/Navbar.module.scss";
-import { Button } from "shared/components/Button";
-import { Link } from "shared/components/Link";
+import { Themer } from "shared/providers/themes";
+import { getClassNames } from "shared/lib";
+import { Link } from "shared/components";
 import { FC } from "react";
 
-export const Navbar: FC<{theme: string, onClick: () => void}> = ({ theme, onClick }) => {
+export const Navbar: FC<INavbarProps> = ({ theme, config, onClick }) => {
     return (
         <div className={getClassNames(classes.navbar, {}, [theme])}>
-            <Button onClick={onClick} title={theme}/>
+            <Themer onClick={onClick} theme={theme}/>
             <div>
-               {appRouterConfig.map(({ path, linkTitle }) => (
-                    <Link key={path} to={path}>{linkTitle}</Link>
+               {config.map(({ path, linkTitle }) => (
+                    <Link key={path} to={path} theme={theme}>{linkTitle}</Link>
                 ))} 
             </div>
         </div>
