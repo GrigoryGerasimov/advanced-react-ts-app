@@ -1,8 +1,8 @@
 import { getClassNames } from "shared/lib/helpers/classNames/getClassNames";
-import classes from "../styles/styles.widgets/Navbar.module.scss";
 import { appRouterConfig } from "app/providers/routes/AppRouter";
-import { Button } from "shared/components/Button/Button";
-import { Link } from "shared/components/Link/Link";
+import classes from "../styles/Navbar.module.scss";
+import { Button } from "shared/components/Button";
+import { Link } from "shared/components/Link";
 import { FC } from "react";
 
 export const Navbar: FC<{theme: string, onClick: () => void}> = ({ theme, onClick }) => {

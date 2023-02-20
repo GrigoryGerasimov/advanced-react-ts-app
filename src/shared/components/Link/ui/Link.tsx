@@ -1,6 +1,6 @@
 import { getClassNames } from "shared/lib/helpers/classNames/getClassNames";
-import classes from "../styles/styles.components/Link.module.scss";
 import { NavLink, NavLinkProps } from "react-router-dom";
+import classes from "../styles/Link.module.scss";
 import { FC } from "react";
 
 interface AppLinkProps extends NavLinkProps {

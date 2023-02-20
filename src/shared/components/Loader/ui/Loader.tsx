@@ -1,4 +1,4 @@
-import classes from "../styles/styles.components/Loader.module.scss";
+import classes from "../styles/Loader.module.scss";
 
 export const Loader = () => {
     const loader = [1, 2, 3].map(i => (<div key={i} className={classes["loader__item"]}></div>));
@@ -7,5 +7,3 @@ export const Loader = () => {
         <div className={classes.loader}>{loader}</div>
     )
 };
-
-export default Loader;

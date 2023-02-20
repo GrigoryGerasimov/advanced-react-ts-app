@@ -26,8 +26,22 @@ export const defineLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
         exclude: /node_modules/
     }
 
+    const svgLoader: IWebpackLoader = {
+        test: /\.svg$/i,
+        use: ["@svgr/webpack"],
+        exclude: /node_modules/
+    }
+
+    const fileLoader: IWebpackLoader = {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: ["file-loader"],
+        exclude: /node_modules/
+    }
+
     return [
         tsLoader,
-        stylesLoader
+        stylesLoader,
+        svgLoader,
+        fileLoader
     ]
 };
