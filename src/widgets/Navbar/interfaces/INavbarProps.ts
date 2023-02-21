@@ -1,8 +1,8 @@
-import { IAppRoutes } from "app/providers";
+import { IRoutes } from "shared/config";
 
 export interface INavbarProps {
     theme: string;
-    config: IAppRoutes[];
+    config: IRoutes[];
     classNames?: string[];
     onClick?: () => void
 }

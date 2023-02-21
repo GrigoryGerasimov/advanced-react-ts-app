@@ -1,7 +1,8 @@
 import { ISidebarProps } from "../interfaces/ISidebarProps";
-import { ThemeHandler } from "shared/providers/themes";
+import { CollapseIcon, OpenIcon } from "shared/assets/ui";
 import { ESidebarMode } from "../types/ESidebarMode";
 import classes from "../styles/Sidebar.module.scss";
+import { ThemeHandler } from "../../ThemeHandler";
 import { Button } from "shared/components";
 import { getClassNames } from "shared/lib";
 import { FC, useState } from "react";
@@ -13,16 +14,15 @@ export const Sidebar: FC<ISidebarProps> = ({ theme, classNames, onClick }) => {
         setCollapsed(prevState => !prevState);
     };
 
-    const togglerName = "Toggle";
-
     return (
         <div className={getClassNames(classes.sidebar, {[classes[ESidebarMode.COLLAPSED]]: collapsed}, classNames)}>
             <Button
-                name={collapsed ? togglerName : togglerName.split("").reverse().join("")}
                 onClick={handleSidebarToggler}
                 shouldBeClean={true}
                 classNames={[classes["sidebar__mode-switcher"]]}
-            />
+            >
+                {collapsed ? <OpenIcon/> : <CollapseIcon/>}
+            </Button>
             <section className={getClassNames(classes["sidebar__functional-section"])}>
                 <ThemeHandler onClick={onClick} theme={theme}/>
             </section>

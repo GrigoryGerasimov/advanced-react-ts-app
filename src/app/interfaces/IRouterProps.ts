@@ -1,7 +1,7 @@
-import { IAppRoutes } from "../providers/routes/lib/interfaces/IAppRoutes";
+import { IRoutes } from "shared/config";
 
 export interface IRouterProps {
-    config?: IAppRoutes[];
+    config?: IRoutes[];
     theme?: string;
     themeSwitchHandler?: () => void;
 }

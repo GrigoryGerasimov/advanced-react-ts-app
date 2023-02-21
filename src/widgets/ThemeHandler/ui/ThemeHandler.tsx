@@ -1,7 +1,7 @@
-import { DarkThemeIcon, LightThemeIcon } from "../../../assets/ui";
-import { IThemeHandler } from "../lib/interfaces/IThemeHandler";
-import { Button } from "../../../components";
-import { ETheme } from "../lib/types/ETheme";
+import { DarkThemeIcon, LightThemeIcon } from "shared/assets/ui";
+import { IThemeHandler } from "../interfaces/IThemeHandler";
+import { Button } from "shared/components";
+import { ETheme } from "../../../shared/providers/themes/lib/types/ETheme";
 import { FC } from "react";
 
 export const ThemeHandler: FC<IThemeHandler> = ({ theme, onClick }) => {

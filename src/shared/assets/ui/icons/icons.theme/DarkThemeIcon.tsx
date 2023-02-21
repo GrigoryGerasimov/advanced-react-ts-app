@@ -1,4 +1,4 @@
-import classes from "../styles/Icon.module.scss";
+import classes from "../../styles/Icon.module.scss";
 
 export const DarkThemeIcon = () => {
     return (
