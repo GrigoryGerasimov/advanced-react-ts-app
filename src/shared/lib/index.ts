@@ -1,2 +1,3 @@
 export { localStorageService } from "./services/localStorageService/localStorageService";
-export { getClassNames } from "./helpers/classNames/getClassNames";
+export { getSwitchedLang } from "./helpers";
+export { getClassNames } from "./helpers";

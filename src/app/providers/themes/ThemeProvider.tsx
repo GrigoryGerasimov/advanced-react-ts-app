@@ -1,4 +1,4 @@
-import { ThemeContext, LS_THEME_KEY, ETheme } from "shared/providers/themes";
+import { ThemeContext, LS_THEME_KEY, ETheme } from "shared/providers";
 import { LS_APP_KEY } from "../../lib/constants/LSAppKeys";
 import { localStorageService } from "shared/lib";
 import { useState, useMemo, FC } from "react";

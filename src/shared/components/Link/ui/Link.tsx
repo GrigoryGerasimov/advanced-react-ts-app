@@ -1,8 +1,8 @@
 import { ILinkProps } from "../interfaces/ILinkProps";
-import { ETheme } from "../../../providers/themes";
 import { ELinkTheme } from "../types/ELinkTheme";
 import classes from "../styles/Link.module.scss";
 import { getClassNames } from "../../../lib";
+import { ETheme } from "../../../providers";
 import { NavLink } from "react-router-dom";
 import { FC } from "react";
 
