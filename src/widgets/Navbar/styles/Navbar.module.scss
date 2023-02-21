@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     background-color: var(--bg-color-inverted);
     color: var(--text-color-inverted);
