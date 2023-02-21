@@ -6,4 +6,16 @@
     background-color: var(--bg-color);
     color: var(--text-color);
     text-shadow: var(--text-effect);
+
+    &__central-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    &__page-wrapper {
+        flex-grow: 1;
+        padding: 30px;
+    }
 }

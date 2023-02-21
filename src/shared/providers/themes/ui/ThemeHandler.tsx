@@ -1,12 +1,12 @@
 import { DarkThemeIcon, LightThemeIcon } from "../../../assets/ui";
-import { IThemer } from "../lib/interfaces/IThemer";
+import { IThemeHandler } from "../lib/interfaces/IThemeHandler";
 import { Button } from "../../../components";
 import { ETheme } from "../lib/types/ETheme";
 import { FC } from "react";
 
-export const Themer: FC<IThemer> = ({ theme, onClick }) => {
+export const ThemeHandler: FC<IThemeHandler> = ({ theme, onClick }) => {
     return (
-        <Button onClick={onClick} containsIcon={true}>
+        <Button onClick={onClick} shouldBeClean={true}>
             {theme === ETheme.DARK ? <DarkThemeIcon/> : <LightThemeIcon/>}
         </Button>
     )
