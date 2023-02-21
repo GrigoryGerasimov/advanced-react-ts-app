@@ -1,20 +1,20 @@
 import { AboutPage, MainPage, CounterPage } from "pages";
-import { IAppRoutes } from "../interfaces/IAppRoutes";
-import { EAppRoutes } from "../types/EAppRoutes";
+import { IRoutes } from "./interfaces/IRoutes";
+import { ERoutes } from "./types/ERoutes";
 
-export const routerConfig: IAppRoutes[] = [
+export const routerConfig: IRoutes[] = [
     {
-        path: EAppRoutes.ABOUT,
+        path: ERoutes.ABOUT,
         linkTitle: "About Page",
         element: <AboutPage/>
     },
     {
-        path: EAppRoutes.COUNTER,
+        path: ERoutes.COUNTER,
         linkTitle: "Counter",
         element: <CounterPage/>
     },
     {
-        path: EAppRoutes.MAIN,
+        path: ERoutes.MAIN,
         linkTitle: "Main Page",
         element: <MainPage/>
     }

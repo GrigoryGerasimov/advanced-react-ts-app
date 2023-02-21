@@ -1,6 +1,6 @@
 @import "./variables/variables.scss";
-@import "shared/providers/themes/styles/light.scss";
-@import "shared/providers/themes/styles/dark.scss";
+@import "./themes/light.scss";
+@import "./themes/dark.scss";
 @import "./reset.scss";
 
 body {

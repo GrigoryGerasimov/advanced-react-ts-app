@@ -1,4 +1,4 @@
-import { routerConfig } from "./lib/config/routerConfig";
+import { routerConfig } from "shared/config";
 
 export const withRouterConfig = (Component: React.ComponentType) => (props: any) => {
     return (

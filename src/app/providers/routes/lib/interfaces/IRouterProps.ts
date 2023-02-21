@@ -1,5 +1,5 @@
-import { IAppRoutes } from "./IAppRoutes";
+import { IRoutes } from "shared/config";
 
 export interface IRouterProps {
-    routes: IAppRoutes[]
+    routes: IRoutes[]
 }

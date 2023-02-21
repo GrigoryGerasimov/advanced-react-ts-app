@@ -16,7 +16,7 @@ export const defineWebpackConfig = (paths: IWebpackConfigPaths, options: IWebpac
             path: output,
             clean: true
         },
-        plugins: definePlugins(template),
+        plugins: definePlugins(template, isDev),
         module: {
             rules: defineLoaders(isDev)
         },
