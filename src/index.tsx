@@ -1,17 +1,19 @@
-import { withThemes } from "shared/providers/themes";
 import { BrowserRouter } from "react-router-dom";
 import { withRouterConfig } from "app/providers";
+import { withSuspense } from "shared/providers";
+import { withThemes } from "shared/providers";
 import { ThemeProvider } from "app/providers";
 import "app/styles/styles.global/index.scss";
 import { render } from "react-dom";
+import "shared/config/i18n/i18n";
 import App from "app/App";
 
-const AppWithProps = withThemes(withRouterConfig(App));
+const SuspendedAppWithProps = withSuspense(withThemes(withRouterConfig(App)));
 
 render(
     <BrowserRouter>
         <ThemeProvider>
-            <AppWithProps/>
+            <SuspendedAppWithProps/>
         </ThemeProvider>
     </BrowserRouter>,
     document.querySelector("#root")

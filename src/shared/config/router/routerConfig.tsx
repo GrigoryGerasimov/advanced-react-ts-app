@@ -5,17 +5,17 @@ import { ERoutes } from "./types/ERoutes";
 export const routerConfig: IRoutes[] = [
     {
         path: ERoutes.ABOUT,
-        linkTitle: "About Page",
+        linkKey: "navlink-about-page",
         element: <AboutPage/>
     },
     {
         path: ERoutes.COUNTER,
-        linkTitle: "Counter",
+        linkKey: "navlink-counter-page",
         element: <CounterPage/>
     },
     {
         path: ERoutes.MAIN,
-        linkTitle: "Main Page",
+        linkKey: "navlink-main-page",
         element: <MainPage/>
     }
 ];

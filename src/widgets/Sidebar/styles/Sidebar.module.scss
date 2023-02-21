@@ -4,7 +4,6 @@
     width: var(--sidebar-width-regular);
     background-color: var(--bg-color-inverted);
     color: var(--text-color-inverted);
-    text-shadow: var(--text-effect-inverted);
     transition: width 0.4s ease-in;
 
     &__mode-switcher {
@@ -13,9 +12,16 @@
     }
 
     &__functional-section {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         bottom: 20px;
-        left: 40%;
+        left: 0;
+        right: 0;
+    }
+
+    &__btn-divider {
+        margin: 20px;
     }
 }
 
