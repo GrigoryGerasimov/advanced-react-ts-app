@@ -15,14 +15,7 @@ export const defineLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
             {
                 loader: "babel-loader",
                 options: {
-                    presets: ["@babel/preset-env"],
-                    plugins: [
-                        "i18next-extract",
-                        {
-                            locales: ["en", "ru", "de", "cz"],
-                            keyAsDefaultValue: true
-                        }
-                    ]
+                    presets: ["@babel/preset-env"]
                 }
             }
         ],
