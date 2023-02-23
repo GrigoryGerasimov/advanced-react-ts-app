@@ -1,7 +1,6 @@
 .dark {
-    --bg-color: rgba(0, 0, 0, .85);
-    --bg-color-inverted: rgba(255, 255, 255, .85);
-
-    --text-color: rgba(255, 255, 255, .85);
-    --text-color-inverted: rgba(0, 0, 0, .85);
+    --bg-color: rgb(0 0 0 / 85%);
+    --bg-color-inverted: rgb(255 255 255 / 85%);
+    --text-color: rgb(255 255 255 / 85%);
+    --text-color-inverted: rgb(0 0 0 / 85%);
 }

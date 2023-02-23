@@ -1,10 +1,9 @@
-.navbar{
+.navbar {
     width: 100%;
     height: var(--navbar-section-height);
     padding: 40px 25px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
     background-color: var(--bg-color-inverted);

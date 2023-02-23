@@ -8,9 +8,8 @@
 
     &__central-section {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center
+        flex-flow: row wrap;
+        justify-content: center;
     }
 
     &__page-wrapper {
