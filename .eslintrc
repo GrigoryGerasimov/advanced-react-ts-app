@@ -1,11 +1,13 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true
   },
   "extends": [
     "plugin:react/recommended",
-    "standard-with-typescript"
+    "standard-with-typescript",
+    "plugin:i18next/recommended"
   ],
   "overrides": [
   ],
@@ -16,7 +18,9 @@
     "project": "tsconfig.json"
   },
   "plugins": [
-    "react"
+    "react",
+    "i18next",
+    "jest"
   ],
   "settings": {
     "react": {
@@ -32,6 +36,7 @@
     "@typescript-eslint/semi": [2, "always"],
     "@typescript-eslint/space-before-function-paren": [2, "never"],
     "@typescript-eslint/naming-convention": [0],
+    "i18next/no-literal-string": [2, { "markupOnly": true }],
     "indent": [2, 4, { "SwitchCase": 1 }],
     "semi": [2, "always"],
     "space-before-function-paren": [2, { "named": "never", "asyncArrow": "never", "anonymous": "never" }],

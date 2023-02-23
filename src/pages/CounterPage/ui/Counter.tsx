@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import classes from "../styles/Counter.module.scss";
 import { Button } from "shared/components/Button";
 import { useState } from "react";

@@ -8,5 +8,5 @@ export const getClassNames = (
 ): string => {
     const extractedClasses = (conditionalClasses != null) ? extractClassNameFromEntries(conditionalClasses) : "";
 
-    return [mainClass, extractedClasses, ...additionalClasses].join(" ");
+    return [mainClass, extractedClasses, ...additionalClasses].toString().replace(/,/g, " ");
 };
