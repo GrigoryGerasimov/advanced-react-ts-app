@@ -1,5 +1,5 @@
 export interface ISidebarProps {
-    theme: string,
-    classNames?: string[],
+    theme: string
+    classNames?: string[]
     onClick?: () => void
 }

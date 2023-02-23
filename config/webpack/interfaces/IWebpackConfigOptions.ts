@@ -1,6 +1,6 @@
-import { TEnvMode } from "../types"
+import { type TEnvMode } from "../types";
 
 export interface IWebpackConfigOptions {
-    mode: TEnvMode,
+    mode: TEnvMode
     port: number
 }

@@ -1,8 +1,8 @@
-import { IRoutes } from "shared/config";
+import { type IRoutes } from "shared/config";
 
 export interface INavbarProps {
-    theme: string;
-    config: IRoutes[];
-    classNames?: string[];
+    theme: string
+    config: IRoutes[]
+    classNames?: string[]
     onClick?: () => void
 }

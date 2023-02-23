@@ -1,4 +1,4 @@
 export interface IThemeHandler {
-    theme?: string;
-    onClick?: () => void;
+    theme?: string
+    onClick?: () => void
 }

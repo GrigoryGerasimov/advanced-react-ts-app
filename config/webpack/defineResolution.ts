@@ -1,4 +1,4 @@
-import webpack from "webpack";
+import type webpack from "webpack";
 
 export const defineResolution = (sourcePath: string): webpack.ResolveOptions => {
     return {
@@ -7,5 +7,5 @@ export const defineResolution = (sourcePath: string): webpack.ResolveOptions => 
         modules: [sourcePath, "node_modules"],
         alias: {},
         mainFiles: ["index"]
-    }
+    };
 };

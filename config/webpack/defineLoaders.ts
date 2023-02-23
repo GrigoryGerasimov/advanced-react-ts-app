@@ -1,13 +1,33 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { IWebpackLoader } from "./interfaces";
-import webpack from "webpack";
+import { type IWebpackLoader } from "./interfaces";
+import type webpack from "webpack";
 
 export const defineLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
     const tsLoader: IWebpackLoader = {
         test: /\.(ts|tsx)$/i,
         use: ["ts-loader"],
         exclude: /node_modules/
-    }
+    };
+
+    const babelLoader = {
+        test: /\.(js|jsx|ts|tsx)$/i,
+        use: [
+            {
+                loader: "babel-loader",
+                options: {
+                    presets: ["@babel/preset-env"],
+                    plugins: [
+                        "i18next-extract",
+                        {
+                            locales: ["en", "ru", "de", "cz"],
+                            keyAsDefaultValue: true
+                        }
+                    ]
+                }
+            }
+        ],
+        exclude: /node_modules/
+    };
 
     const stylesLoader: IWebpackLoader = {
         test: /\.s(a|c)ss$/i,
@@ -24,24 +44,25 @@ export const defineLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
             },
             "sass-loader"],
         exclude: /node_modules/
-    }
+    };
 
     const svgLoader: IWebpackLoader = {
         test: /\.svg$/i,
         use: ["@svgr/webpack"],
         exclude: /node_modules/
-    }
+    };
 
     const fileLoader: IWebpackLoader = {
         test: /\.(png|jpe?g|gif)$/i,
         use: ["file-loader"],
         exclude: /node_modules/
-    }
+    };
 
     return [
+        babelLoader,
         tsLoader,
         stylesLoader,
         svgLoader,
         fileLoader
-    ]
+    ];
 };

@@ -1,0 +1,15 @@
+.select {
+    display: block;
+    width: max-content;
+    padding: 15px 20px;
+    background-color: inherit;
+    color: inherit;
+    border-radius: 10px;
+    font: var(--font-m);
+}
+
+.option {
+    background-color: var(--bg-color-inverted);
+    color: var(--text-color-inverted);
+    font: var(--font-m);
+}

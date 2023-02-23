@@ -1,6 +1,6 @@
 import { definePlugins, defineLoaders, defineResolution, defineDevServer } from "./";
-import { IWebpackConfigOptions, IWebpackConfigPaths } from "./interfaces";
-import webpack from "webpack";
+import { type IWebpackConfigOptions, type IWebpackConfigPaths } from "./interfaces";
+import type webpack from "webpack";
 
 export const defineWebpackConfig = (paths: IWebpackConfigPaths, options: IWebpackConfigOptions): webpack.Configuration => {
     const { entry, output, template, source } = paths;
@@ -23,5 +23,5 @@ export const defineWebpackConfig = (paths: IWebpackConfigPaths, options: IWebpac
         resolve: defineResolution(source),
         devtool: isDev && "inline-source-map",
         devServer: isDev ? defineDevServer(port) : undefined
-    }
+    };
 };

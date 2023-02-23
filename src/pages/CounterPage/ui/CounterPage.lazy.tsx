@@ -1,3 +1,3 @@
 import { lazy } from "react";
 
-export const CounterPageLazy = lazy(() => import("./Counter")); 
+export const CounterPageLazy = lazy(async() => await import("./Counter"));

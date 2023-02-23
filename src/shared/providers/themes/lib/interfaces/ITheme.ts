@@ -1,4 +1,4 @@
 export interface ITheme {
-    theme?: string,
+    theme?: string
     themeSwitchHandler?: () => void
 }

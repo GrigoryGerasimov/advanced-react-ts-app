@@ -6,6 +6,6 @@ export const getSwitchedLang = (lang: string): string => {
         case ELang.RUSSIAN: return ELang.GERMAN;
         case ELang.GERMAN: return ELang.CZECH;
         case ELang.CZECH: return ELang.ENGLISH;
-        default: ELang.ENGLISH;
+        default: return ELang.ENGLISH;
     }
-}
+};

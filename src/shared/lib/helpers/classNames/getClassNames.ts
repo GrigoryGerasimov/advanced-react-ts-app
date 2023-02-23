@@ -1,12 +1,12 @@
 import { extractClassNameFromEntries } from "./lib/extractClassNameFromEntries";
-import { TClassNames } from "./types/TClassNames";
+import { type TClassNames } from "./types/TClassNames";
 
 export const getClassNames = (
-        mainClass: string,
-        conditionalClasses?: TClassNames,
-        additionalClasses: string[] = []
-    ) => {
-    const extractedClasses = conditionalClasses ? extractClassNameFromEntries(conditionalClasses) : "";
+    mainClass: string,
+    conditionalClasses?: TClassNames,
+    additionalClasses: string[] = []
+): string => {
+    const extractedClasses = (conditionalClasses != null) ? extractClassNameFromEntries(conditionalClasses) : "";
 
     return [mainClass, extractedClasses, ...additionalClasses].join(" ");
 };

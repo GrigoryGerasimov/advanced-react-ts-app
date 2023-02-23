@@ -1,14 +1,14 @@
 import classes from "./styles/styles.app/App.module.scss";
-import { IRouterProps } from "./interfaces/IRouterProps";
+import { type IAppProps } from "./interfaces/IAppProps";
 import { withSuspense } from "shared/providers";
 import { RoutesProvider } from "./providers";
 import { getClassNames } from "shared/lib";
 import { Navbar, Sidebar } from "widgets";
-import { FC } from "react";
+import { type FC } from "react";
 
 const SuspendedRoutesProvider = withSuspense(RoutesProvider);
 
-const App: FC<IRouterProps> = ({ config, theme, themeSwitchHandler }) => {
+const App: FC<IAppProps> = ({ config, theme, themeSwitchHandler }): JSX.Element | null => {
     return (
         <div className={getClassNames(classes.app, {}, [theme])}>
             <Navbar theme={theme} config={config}/>
@@ -19,7 +19,7 @@ const App: FC<IRouterProps> = ({ config, theme, themeSwitchHandler }) => {
                 </main>
             </section>
         </div>
-    )
+    );
 };
 
 export default App;

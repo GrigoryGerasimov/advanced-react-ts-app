@@ -1,16 +1,17 @@
-import { TLocalStorageService, TLocalStorageResult } from "./types/TLocalStorageService";
+import { type TLocalStorageService, type TLocalStorageResult } from "./types/TLocalStorageService";
 
 export const localStorageService: TLocalStorageService = {
     create: (key, payload) => {
         localStorage.setItem(key, JSON.stringify(payload));
     },
     read: (key) => {
-        return JSON.parse(localStorage.getItem(key)) as TLocalStorageResult;
+        const result = localStorage.getItem(key);
+        return result !== null ? JSON.parse(result) as TLocalStorageResult : null;
     },
     delete: (key) => {
         localStorage.removeItem(key);
     },
     check: (key) => {
-        return !!localStorage[key];
+        return Boolean(localStorage[key]);
     }
 };

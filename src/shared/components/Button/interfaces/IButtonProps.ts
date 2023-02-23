@@ -1,4 +1,4 @@
 export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    classNames?: string[],
+    classNames?: string[]
     shouldBeClean?: boolean
 }

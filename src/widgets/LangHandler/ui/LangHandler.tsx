@@ -1,19 +1,21 @@
-import { ILangHandler } from "../interfaces/ILangHandler";
+import { type ILangHandler } from "../interfaces/ILangHandler";
+import classes from "../styles/LangHandler.module.scss";
 import { useTranslation } from "react-i18next";
-import { getSwitchedLang } from "shared/lib";
-import { Button } from "shared/components";
-import { FC } from "react";
+import { langOptions } from "shared/config";
+import { Select } from "shared/components";
+import { type FC, useState } from "react";
 
-export const LangHandler: FC<ILangHandler> = ({ classNames }) => {
-    const { t, i18n } = useTranslation();
+export const LangHandler: FC<ILangHandler> = ({ classNames }): JSX.Element | null => {
+    const { i18n } = useTranslation();
+    const [currentLng, setCurrentLng] = useState(i18n.language);
 
-    const handleLangSwitch = () => {
-        i18n.changeLanguage(getSwitchedLang(i18n.language));
+    const handleLangSwitch = (value: string): void => {
+        void i18n.changeLanguage(value, () => { setCurrentLng(i18n.language); });
     };
 
     return (
-        <Button onClick={handleLangSwitch} shouldBeClean={true} classNames={classNames}>
-            {t("lang")}
-        </Button>
-    )
+        <div className={classes["select-wrapper"]}>
+            <Select options={langOptions} onChange={handleLangSwitch} value={currentLng} classNames={classNames}/>
+        </div>
+    );
 };
