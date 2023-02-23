@@ -1,8 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
-import { withRouterConfig } from "app/providers";
-import { withSuspense } from "shared/providers";
-import { withThemes } from "shared/providers";
-import { ThemeProvider } from "app/providers";
+import { withRouterConfig, ThemeProvider } from "app/providers";
+import { withSuspense, withThemes } from "shared/providers";
+
 import "app/styles/styles.global/index.scss";
 import { render } from "react-dom";
 import "shared/config/i18n/i18n";
@@ -17,4 +16,4 @@ render(
         </ThemeProvider>
     </BrowserRouter>,
     document.querySelector("#root")
-)
+);

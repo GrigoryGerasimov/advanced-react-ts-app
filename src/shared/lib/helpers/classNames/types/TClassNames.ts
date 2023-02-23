@@ -1,1 +1,1 @@
-export type TClassNames = Record<string, boolean | string>;
+export type TClassNames = Record<string, boolean>;

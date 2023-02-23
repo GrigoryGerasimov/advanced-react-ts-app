@@ -1,7 +1,6 @@
 import { createContext, useContext } from "react";
-import { ITheme } from "./interfaces/ITheme";
+import { type ITheme } from "./interfaces/ITheme";
 
 export const ThemeContext = createContext<ITheme>({});
 
-export const useTheme = () => useContext(ThemeContext);
-
+export const useTheme = (): ITheme => useContext(ThemeContext);

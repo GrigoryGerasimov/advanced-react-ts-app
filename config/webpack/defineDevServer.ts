@@ -1,4 +1,4 @@
-import { Configuration as DevServerConfiguration } from "webpack-dev-server";
+import { type Configuration as DevServerConfiguration } from "webpack-dev-server";
 
 export const defineDevServer = (port: number): DevServerConfiguration => {
     return {
@@ -6,5 +6,5 @@ export const defineDevServer = (port: number): DevServerConfiguration => {
         open: true,
         hot: true,
         historyApiFallback: true
-    }
+    };
 };

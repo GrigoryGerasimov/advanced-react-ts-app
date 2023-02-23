@@ -16,5 +16,5 @@ export const definePlugins = (template: string, isDev: boolean): webpack.Webpack
         }),
         new webpack.HotModuleReplacementPlugin(),
         new ReactRefreshWebpackPlugin()
-    ]
-}
+    ];
+};

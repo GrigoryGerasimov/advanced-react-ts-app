@@ -1,1 +1,1 @@
-export { TEnvMode } from "./TEnvMode";
+export type { TEnvMode } from "./TEnvMode";

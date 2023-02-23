@@ -1,5 +1,5 @@
 import { AboutPage, MainPage, CounterPage } from "pages";
-import { IRoutes } from "./interfaces/IRoutes";
+import { type IRoutes } from "./interfaces/IRoutes";
 import { ERoutes } from "./types/ERoutes";
 
 export const routerConfig: IRoutes[] = [

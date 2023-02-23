@@ -1,6 +1,6 @@
-import { NavLinkProps } from "react-router-dom";
+import { type NavLinkProps } from "react-router-dom";
 
 export interface ILinkProps extends NavLinkProps {
-    classNames?: string[],
+    classNames?: string[]
     theme?: string
 }

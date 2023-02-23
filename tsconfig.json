@@ -6,6 +6,8 @@
         "paths": {
             "*": ["./src/*"]
         },
+        "strict": true,
+        "strictNullChecks": true,
         "noImplicitAny": true,
         "module": "ESNext",
         "target": "es5",

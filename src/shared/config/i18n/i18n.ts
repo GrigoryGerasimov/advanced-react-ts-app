@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
 import i18n from "i18next";
 
-i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
+void i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
     fallbackLng: "en",
     debug: __IS_DEV_MODE__,
     interpolation: {

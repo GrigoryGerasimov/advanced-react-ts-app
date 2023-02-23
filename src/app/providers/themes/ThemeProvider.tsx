@@ -1,7 +1,7 @@
 import { ThemeContext, LS_THEME_KEY, ETheme } from "shared/providers";
 import { LS_APP_KEY } from "../../lib/constants/LSAppKeys";
 import { localStorageService } from "shared/lib";
-import { useState, useMemo, FC } from "react";
+import { useState, useMemo, type FC } from "react";
 
 const initialState = localStorageService.read(LS_APP_KEY)?.[LS_THEME_KEY] as ETheme ?? ETheme.LIGHT;
 
@@ -11,7 +11,7 @@ export const ThemeProvider: FC = ({ children }) => {
     const themeSwitchHandler = (): void => {
         setTheme((prevTheme: string) => {
             const switchedTheme = prevTheme === ETheme.DARK ? ETheme.LIGHT : ETheme.DARK;
-            localStorageService.create(LS_APP_KEY, {[LS_THEME_KEY]: switchedTheme});
+            localStorageService.create(LS_APP_KEY, { [LS_THEME_KEY]: switchedTheme });
             return switchedTheme;
         });
     };
@@ -22,5 +22,5 @@ export const ThemeProvider: FC = ({ children }) => {
         <ThemeContext.Provider value={exportValue}>
             {children}
         </ThemeContext.Provider>
-    )
-}
+    );
+};

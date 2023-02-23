@@ -1,4 +1,4 @@
-import { IRoutes } from "shared/config";
+import { type IRoutes } from "shared/config";
 
 export interface IRouterProps {
     routes: IRoutes[]
