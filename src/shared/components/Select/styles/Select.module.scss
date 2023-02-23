@@ -4,16 +4,15 @@
     padding: 15px 20px;
     background-color: inherit;
     color: inherit;
-    border-radius: 10px;
     font: var(--font-m);
+    outline: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
 }
 
 .option {
     background-color: var(--bg-color-inverted);
     color: var(--text-color-inverted);
     font: var(--font-m);
-
-    &:focus {
-        background-color: transparent;
-    }
 }
