@@ -4,5 +4,10 @@
         "not-found-title": "Oops... Page not found",
         "not-found-body": "Most probably the page you are looking for has never existed or it has already been deleted",
         "back": "Back to Homepage"
+    },
+    "error": {
+        "message-title": "Unfortunately, an issue has just occurred",
+        "message-body": "We are sorry, but due to some unforeseen technical issues your action on the current page has resulted in an error. Please refresh the current page and try again",
+        "reload": "Refresh"
     }
 }

@@ -1,8 +1,13 @@
 {
     "lang": "Čeština",
     "404": {
-        "not-found-title": "Oops... Stránka nebyla nalezena",
+        "not-found-title": "Jejda... Stránka nebyla nalezena",
         "not-found-body": "Tato stránka nikdy neexistovala nebo již byla smazána",
-        "back": ""
+        "back": "Na domovskou stránku"
+    },
+    "error": {
+        "message-title": "Bohužel se na této stránce stala chyba",
+        "message-body": "Je nám líto, ale bohužel kvůli neočekáváným technickým chýbám táto stránka přestala fungovat. Rádi bychom Vám doporučili tuto stránku obnovit a zkusit znova",
+        "reload": "Obnovit"
     }
 }
