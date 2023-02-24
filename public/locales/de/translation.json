@@ -1,8 +1,13 @@
 {
     "lang": "Deutsch",
     "404": {
-        "not-found-title": "Oops... Seite nicht gefunden",
+        "not-found-title": "Ups... Seite nicht gefunden",
         "not-found-body": "Es kann sein, dass diese Seite nie existierte oder einfach gelöscht wurde",
         "back": "Zurück zur Hauptseite"
+    },
+    "error": {
+        "message-title": "Leider ist es zu einem Fehler gekommen",
+        "message-body": "Es tut uns leid, aber wegen einiger unerwarteter technischer Probleme ist auf dieser Seite ein Fehler passiert. Wir empfehlen Ihnen, die Seite neu zu laden und es nochmals zu versuchen",
+        "reload": "Neu laden"
     }
 }
