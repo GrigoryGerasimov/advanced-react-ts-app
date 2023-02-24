@@ -1,7 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { withRouterConfig, ThemeProvider } from "app/providers";
 import { withSuspense, withThemes } from "shared/providers";
-
 import "app/styles/styles.global/index.scss";
 import { render } from "react-dom";
 import "shared/config/i18n/i18n";
