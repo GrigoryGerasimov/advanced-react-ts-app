@@ -1,3 +1,8 @@
 {
-    "lang": "Čeština"
+    "lang": "Čeština",
+    "404": {
+        "not-found-title": "Oops... Stránka nebyla nalezena",
+        "not-found-body": "Tato stránka nikdy neexistovala nebo již byla smazána",
+        "back": ""
+    }
 }

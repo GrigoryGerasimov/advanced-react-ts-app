@@ -1,3 +1,8 @@
 {
-    "lang": "Deutsch"
+    "lang": "Deutsch",
+    "404": {
+        "not-found-title": "Oops... Seite nicht gefunden",
+        "not-found-body": "Es kann sein, dass diese Seite nie existierte oder einfach gelöscht wurde",
+        "back": "Zurück zur Hauptseite"
+    }
 }

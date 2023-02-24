@@ -1,3 +1,8 @@
 {
-    "lang": "English"
+    "lang": "English",
+    "404": {
+        "not-found-title": "Oops... Page not found",
+        "not-found-body": "Most probably the page you are looking for has never existed or it has already been deleted",
+        "back": "Back to Homepage"
+    }
 }

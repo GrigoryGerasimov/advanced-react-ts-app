@@ -6,15 +6,17 @@ import { Link } from "shared/components";
 import { ENS } from "shared/config";
 import { type FC } from "react";
 
-export const Navbar: FC<INavbarProps> = ({ theme, config, classNames }) => {
+export const Navbar: FC<INavbarProps> = ({ theme, config, classNames }): JSX.Element | null => {
     const { t } = useTranslation(ENS.NAVBAR);
 
     return (
         <div className={getClassNames(classes.navbar, {}, classNames)}>
             <div>
-                {config.map(({ path, linkKey }) => (
-                    <Link key={path} to={path} theme={theme}>{t(linkKey)}</Link>
-                ))}
+                {config
+                    .filter(({ linkKey }) => Boolean(linkKey))
+                    .map(({ path, linkKey }) => (
+                        <Link key={path} to={path} theme={theme}>{linkKey !== undefined && t(linkKey)}</Link>
+                    ))}
             </div>
         </div>
     );

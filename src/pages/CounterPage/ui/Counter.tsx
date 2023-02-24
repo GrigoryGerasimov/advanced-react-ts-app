@@ -20,8 +20,8 @@ const Counter = (): JSX.Element | null => {
                 <output className={classes.counter__output}>{counter}</output>
             </div>
             <div>
-                <Button onClick={increment} name="+ 1"/>
-                <Button onClick={decrement} name="- 1"/>
+                <Button onClick={increment} name="+ 1" classNames={[classes.counter__btn]}/>
+                <Button onClick={decrement} name="- 1" classNames={[classes.counter__btn]}/>
             </div>
         </div>
     );

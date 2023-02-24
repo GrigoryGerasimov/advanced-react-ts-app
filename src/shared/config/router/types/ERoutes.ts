@@ -1,5 +1,6 @@
 export enum ERoutes {
     MAIN = "/",
     ABOUT = "/about",
-    COUNTER = "/counter"
+    COUNTER = "/counter",
+    NOT_FOUND = "*"
 }

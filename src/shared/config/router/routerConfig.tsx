@@ -1,4 +1,4 @@
-import { AboutPage, MainPage, CounterPage } from "pages";
+import { AboutPage, MainPage, CounterPage, NotFoundPage } from "pages";
 import { type IRoutes } from "./interfaces/IRoutes";
 import { ERoutes } from "./types/ERoutes";
 
@@ -17,5 +17,9 @@ export const routerConfig: IRoutes[] = [
         path: ERoutes.MAIN,
         linkKey: "navlink-main-page",
         element: <MainPage/>
+    },
+    {
+        path: ERoutes.NOT_FOUND,
+        element: <NotFoundPage/>
     }
 ];
