@@ -1,6 +1,6 @@
 .notfound {
-    position: relative;
-    // height: calc(100vh - var(--navbar-section-height));
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-flow: column wrap;
     flex-grow: 1;
@@ -8,6 +8,6 @@
     align-items: center;
 
     &__unit {
-        font: var(--font-m);
+        margin: 15px;
     }
 }
