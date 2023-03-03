@@ -4,7 +4,7 @@ import classes from "../styles/Link.module.scss";
 import { getClassNames } from "../../../lib";
 import { ETheme } from "../../../providers";
 import { NavLink } from "react-router-dom";
-import { type FC } from "react";
+import React, { type FC } from "react";
 
 export const Link: FC<ILinkProps> = ({ to, theme, children }) => {
     return (

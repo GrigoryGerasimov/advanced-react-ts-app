@@ -1,6 +1,12 @@
 export default {
     clearMocks: true,
-    testEnvironment: "jsdom",
+    testEnvironment: "jest-environment-jsdom",
+    setupFilesAfterEnv: [
+        "<rootDir>config/jest/setupTests.ts"
+    ],
+    moduleNameMapper: {
+        "\\.(sass|scss|css)$": "identity-obj-proxy"
+    },
     coveragePathIgnorePatterns: [
         "\\\\node_modules\\\\"
     ],
@@ -13,6 +19,9 @@ export default {
     ],
     moduleDirectories: [
         "node_modules"
+    ],
+    modulePaths: [
+        "<rootDir>src"
     ],
     rootDir: "../../",
     testMatch: [
