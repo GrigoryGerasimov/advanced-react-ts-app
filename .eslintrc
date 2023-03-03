@@ -45,7 +45,8 @@
     {
       "files": "**/*.{test,init}.{ts,tsx}",
       "rules": {
-        "i18next/no-literal-string": "off"
+        "i18next/no-literal-string": [0],
+        "@typescript-eslint/no-non-null-assertion": [0]
       }
     }
   ],

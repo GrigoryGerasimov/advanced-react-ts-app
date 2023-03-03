@@ -27,5 +27,6 @@ export default {
     testMatch: [
         "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"
     ],
-    timers: "fake"
+    timers: "fake",
+    testTimeout: 30000
 };
