@@ -9,7 +9,11 @@ export const Select: FC<ISelectProps> = ({ options, onChange, value, classNames 
     };
 
     return (
-        <select onChange={handleChange} value={value} className={getClassNames(classes.select, {}, classNames)}>
+        <select
+            data-testid="select"
+            onChange={handleChange}
+            value={value}
+            className={getClassNames(classes.select, {}, classNames)}>
             {options.map(({ lang, title }) => (
                 <option
                     key={lang}
